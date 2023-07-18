@@ -31,38 +31,38 @@
   }
 {%- endstyle -%}
 
-{% comment %}Custom Sort By Code Start {% endcomment %}
-<div class="filter-dropdown__wrapper text-center collection-filters">
-  <div class="filter-dropdown" style="float:right;">
-    <label class="filter-dropdown__label" for="sortBy">
-      <span class="filter-dropdown__label--title" style="font-size: 1em; color:#999999;">Sort by</span>
-      <span class="filter-dropdown__label--active"></span>
-    </label>
-    {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
-    <div class="container">
-      <div class="custom-select-wrapper">
-        <div class="custom-select">
-          <div class="custom-select__trigger">
-            <span>Featured</span>
-            <div class="arrow"></div>
-          </div>
-          <div class="custom-options">
-            <span class="custom-option selected" data-value="manual">Featured</span>
-            <span class="custom-option" data-value="created-ascending">Date, old to new</span>
-            <span class="custom-option" data-value="created-descending">Date, new to old</span>
-            <span class="custom-option" data-value="price-ascending">Price, low to high</span>
-            <span class="custom-option" data-value="price-descending">Price, high to low</span>
+<div class="section-{{ section.id }}-padding">
+  {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
+  {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
+    {% comment %}Custom Sort By Code Start {% endcomment %}
+    <div class="filter-dropdown__wrapper text-center collection-filters">
+      <div class="filter-dropdown" style="float:right;">
+        <label class="filter-dropdown__label" for="sortBy">
+          <span class="filter-dropdown__label--title" style="font-size: 1em; color:#999999;">Sort by</span>
+          <span class="filter-dropdown__label--active"></span>
+        </label>
+        {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+        <div class="container">
+          <div class="custom-select-wrapper">
+            <div class="custom-select">
+              <div class="custom-select__trigger">
+                <span>Featured</span>
+                <div class="arrow"></div>
+              </div>
+              <div class="custom-options">
+                <span class="custom-option selected" data-value="manual">Featured</span>
+                <span class="custom-option" data-value="created-ascending">Date, old to new</span>
+                <span class="custom-option" data-value="created-descending">Date, new to old</span>
+                <span class="custom-option" data-value="price-ascending">Price, low to high</span>
+                <span class="custom-option" data-value="price-descending">Price, high to low</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-{% comment %}Custom Sort By Code End {% endcomment %}
+    {% comment %}Custom Sort By Code End {% endcomment %}
 
-<div class="section-{{ section.id }}-padding">
-  {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
-  {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
     <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden" style="display:none">
       <form class="facets-vertical-form" id="FacetSortForm">
         <div class="facet-filters sorting caption">
