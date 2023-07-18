@@ -52,6 +52,6 @@ $("body").on("click", ".custom-select li", function () {
 });
 
 function customSort(sortValue) {
- let currentUrl = "aa";
-  console.log(currentUrl)
+ let currentUrl = window.location;
+  console.log()
 }
