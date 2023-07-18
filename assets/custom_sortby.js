@@ -58,21 +58,14 @@ function customSort(sortValue) {
 $.get({
   url: currentUrl,
   success: function(data){
-       var newProductsWrapper = $(data).find("#product-grid");
-        var newProductsHtml = newProductsWrapper.html();
-        $("#product-grid").html(newProductsHtml);
-
-        var newItemCount = newProductsWrapper.attr("data-products-count");
-        $(".js-product-grid__count").text(newItemCount);
-        history.pushState(
-          {
-            page: collectionUrl,
-          },
-          null,
-          collectionUrl
-        );
-
-        $("#product-grid").removeClass("ajax-loading");
+      history.pushState(
+        {
+          page: currentUrl,
+        },
+        null,
+        currentUrl
+        
+      )
   }
   
 })
