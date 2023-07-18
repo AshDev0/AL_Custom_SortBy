@@ -57,8 +57,6 @@ function customSort(sortValue) {
 
 $.get({
   url: currentUrl,
-  method: "get",
-  cache: false,
   success: function(data){
       console.log("true")
   }
