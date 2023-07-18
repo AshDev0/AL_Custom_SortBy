@@ -12,3 +12,4 @@ $("body").on("click", ".custom-select li", function () {
     $(".sel-text").text(selected);
     customSort(selected_val);
 
+});
