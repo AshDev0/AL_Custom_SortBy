@@ -60,7 +60,8 @@ $.ajax({
   url: currentUrl,
      success: function (data) {
        var newProductsWrapper = $(data).find("#product-grid");
-     console.log(newProductsWrapper)
+       var newProductsHtml = newProductsWrapper.html();
+     console.log(newProductsHtml)
       history.pushState(
         {
           page: currentUrl,
