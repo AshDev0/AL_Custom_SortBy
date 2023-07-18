@@ -68,10 +68,10 @@ $.ajax({
       $(".js-product-grid__count").text(newItemCount);
       history.pushState(
         {
-          page: collectionUrl,
+          page: currentUrl,
         },
         null,
-        collectionUrl
+        currentUrl
       );
 
     },
