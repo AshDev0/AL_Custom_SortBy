@@ -56,7 +56,7 @@ function customSort(sortValue) {
   console.log(currentUrl)
 
 $.get({
-  url: currentUrl,
+  url: "https://bbb-hydrogen-test.myshopify.com/collections/adidas?sort_by=manual",
   success: function(data){
       console.log("true")
   }
