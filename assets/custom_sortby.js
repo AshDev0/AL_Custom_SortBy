@@ -1,3 +1,5 @@
+/*
+
 for (const dropdown of document.querySelectorAll(".custom-select-wrapper")) {
   dropdown.addEventListener("click", function () {
     this.querySelector(".custom-select").classList.toggle("open");
@@ -31,7 +33,7 @@ window.addEventListener("click", function (e) {
   }
 });
 
-
+*/
 
  $("body").on("click", ".select-box", function () {
     $(".select-wrapper").toggle();
