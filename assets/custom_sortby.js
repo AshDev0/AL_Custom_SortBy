@@ -53,5 +53,5 @@ $("body").on("click", ".custom-select li", function () {
 
 function customSort(sortValue) {
  let currentUrl = window.location.href;
-  console.log()
+  console.log(currentUrl)
 }
