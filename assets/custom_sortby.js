@@ -55,7 +55,7 @@ function customSort(sortValue) {
  let currentUrl = window.location.href+"?sort_by="+sortValue;
   console.log(currentUrl)
 
-$.get({
+$.ajax({
   url: currentUrl,
   success: function(data){
       console.log("true")
