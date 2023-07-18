@@ -58,14 +58,7 @@ function customSort(sortValue) {
 $.get({
   url: currentUrl,
   success: function(data){
-      history.pushState(
-        {
-          page: currentUrl,
-        },
-        null,
-        currentUrl
-        
-      )
+      console.log("true")
   }
   
 })
