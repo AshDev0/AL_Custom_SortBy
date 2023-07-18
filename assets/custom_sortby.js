@@ -59,7 +59,8 @@ function customSort(sortValue) {
 $.ajax({
   url: currentUrl,
      success: function (data) {
-     console.log(data)
+       var newProductsWrapper = $(data).find("#product-grid");
+     console.log(newProductsWrapper)
       history.pushState(
         {
           page: currentUrl,
