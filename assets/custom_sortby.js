@@ -61,8 +61,8 @@ $.ajax({
      success: function (data) {
        var newProductsWrapper = $(data).find("#product-grid");
        var newProductsHtml = newProductsWrapper.html();
-      // $("#product-grid").html(newProductsHtml);
         $("#product-grid").remove();
+       $("#product-grid").html(newProductsHtml);
      console.log(newProductsHtml)
       history.pushState(
         {
