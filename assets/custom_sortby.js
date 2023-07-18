@@ -31,7 +31,7 @@ window.addEventListener("click", function (e) {
   }
 });
 
-/*****************/
+
 
  $("body").on("click", ".select-box", function () {
     $(".select-wrapper").toggle();
