@@ -52,7 +52,7 @@ $("body").on("click", ".custom-select li", function () {
 });
 
 function customSort(sortValue) {
- let currentUrl = window.location.href;
+ let currentUrl = window.location.href+"/?sort_by="+sortValue;
   console.log(currentUrl)
 
 $.get({
