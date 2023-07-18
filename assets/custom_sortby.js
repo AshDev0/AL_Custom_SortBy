@@ -59,14 +59,7 @@ function customSort(sortValue) {
 $.ajax({
   url: currentUrl,
      success: function (data) {
-      var newProductsWrapper = $(data).find(
-        ".template-search__results #product-grid"
-      );
-      var newProductsHtml = newProductsWrapper.html();
-      $(".template-search__results #product-grid").html(newProductsHtml);
-
-      var newItemCount = newProductsWrapper.attr("data-products-count");
-      $(".js-product-grid__count").text(newItemCount);
+     
       history.pushState(
         {
           page: currentUrl,
