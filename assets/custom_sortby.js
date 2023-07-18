@@ -47,6 +47,11 @@ $("body").on("click", ".custom-select li", function () {
     var selected_val = $(this).data("value");
 
     $(".sel-text").text(selected);
-   // customSort(selected_val);
+    customSort(selected_val);
 
 });
+
+function customSort(sortValue) {
+ let currentUrl = "aa";
+  console.log(currentUrl)
+}
