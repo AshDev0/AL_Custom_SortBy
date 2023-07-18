@@ -52,8 +52,8 @@ $("body").on("click", ".custom-select li", function () {
 });
 
 function customSort(sortValue) {
-  $(".select-box").data("collection-url") + "/?sort_by=" + sortValue;
- let currentUrl = window.location.href+"/?sort_by="+sortValue;
+ let currentUrl =  $(".select-box").data("collection-url") + "/?sort_by=" + sortValue;
+ 
   console.log(currentUrl)
 
 $.ajax({
