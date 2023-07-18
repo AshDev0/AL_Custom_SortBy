@@ -36,34 +36,32 @@ window.addEventListener("click", function (e) {
 */
 /******* sort by js ***********/
 
-
- $("body").on("click", ".select-box", function () {
-    $(".select-wrapper").toggle();
-  });
-
+$("body").on("click", ".select-box", function () {
+  $(".select-wrapper").toggle();
+});
 
 $("body").on("click", ".custom-select li", function () {
-    var selected = $(this).children().text();
-    var selected_val = $(this).data("value");
+  var selected = $(this).children().text();
+  var selected_val = $(this).data("value");
 
-    $(".sel-text").text(selected);
-    customSort(selected_val);
-
+  $(".sel-text").text(selected);
+  customSort(selected_val);
 });
 
 function customSort(sortValue) {
- let currentUrl =  $(".select-box").data("collection-url") + "/?sort_by=" + sortValue;
- 
-  console.log(currentUrl)
+  let currentUrl =
+    $(".select-box").data("collection-url") + "/?sort_by=" + sortValue;
 
-$.ajax({
-  url: currentUrl,
-     success: function (data) {
-       var newProductsWrapper = $(data).find("#product-grid");
-       var newProductsHtml = newProductsWrapper.html();
-        $("#product-grid").empty();
-       $("#product-grid").html(newProductsHtml);
-     console.log(newProductsHtml)
+  console.log(currentUrl);
+
+  $.ajax({
+    url: currentUrl,
+    success: function (data) {
+      var newProductsWrapper = $(data).find("#product-grid");
+      var newProductsHtml = newProductsWrapper.html();
+      $("#product-grid").empty();
+      $("#product-grid").html(newProductsHtml);
+      console.log(newProductsHtml);
       history.pushState(
         {
           page: currentUrl,
@@ -71,9 +69,6 @@ $.ajax({
         null,
         currentUrl
       );
-
     },
-  
-})
-  
+  });
 }
